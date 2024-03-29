@@ -41,7 +41,7 @@ export default function HeroSearchSection() {
     // }, [])
   return (
     <div className='flex flex-col items-center text-center space-y-4 bg-blue-100  '>
-        <h2 className='mt-5 font-extrabold text-5xl text-blue-950'>USSD Finder for Zimbabwe</h2>
+        <h2 className='mt-5 font-extrabold lg:text-5xl text-3xl text-blue-950'>USSD Finder for Zimbabwe</h2>
         <div className="relative flex items-center px-3 py-1 w-[350px] rounded-md">
     <form className='w-full' onSubmit={submitHandler}>
     <input type="text" className="outline-none rounded-lg py-2 px-3 p-1 w-full" placeholder='Search bank, telcom, mobile money... ' value={input} onChange={(e)=>setInput(e.target.value)} />
