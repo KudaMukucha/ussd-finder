@@ -14,7 +14,7 @@ export default function Header() {
     },
     {
       name:'Blog',
-      path:'/blog'
+      path:'#'
     },
 
   ]
@@ -64,7 +64,7 @@ export default function Header() {
           </ul>
 
           {/* btn for large screens */}
-          <Link className='flex bg-blue-700 text-white px-4 py-2 shadow-xl rounded-bl-lg rounded-tr-lg hover:text-slate-300 hover:shadow-none transition-all duration-300'>Get App</Link>
+          <Link to={'#'} className='flex bg-blue-700 text-white px-4 py-2 shadow-xl rounded-bl-lg rounded-tr-lg hover:text-slate-300 hover:shadow-none transition-all duration-300'>Get App</Link>
           </div>
       
             {/* menu for small screens */}
@@ -91,7 +91,7 @@ export default function Header() {
           }
 
           </ul>
-          <Link className='flex bg-blue-700 text-white px-4 py-2 shadow-xl rounded-bl-lg rounded-tr-lg hover:text-slate-300 hover:shadow-none transition-all duration-300'>Get App</Link>
+          <Link to={'#'} className='flex bg-blue-700 text-white px-4 py-2 shadow-xl rounded-bl-lg rounded-tr-lg hover:text-slate-300 hover:shadow-none transition-all duration-300'>Get App</Link>
         </div>
       </nav>
     </header>
