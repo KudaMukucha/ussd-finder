@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import { FaBars,FaXmark } from  'react-icons/fa6'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 export default function Header() {
   const navItems =[
     {
@@ -25,10 +25,25 @@ export default function Header() {
   const toggleMenu=()=>{
     setIsMenuOpen(!isMenuOpen)
   }
+  useEffect(() => {
+    const handleScroll =()=>{
+        if(window.scrollY > 100){
+            setIsSticky(true)
+        }
+        else{
+            setIsSticky(false)
+        }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return()=>{
+        window.addEventListener('scroll', handleScroll)
+    }
+}, []);
   return (
-    <header className=''>
-      <nav className='lg:px-20 px-4 py-4'>
-        <div className={`flex justify-between items-center ${isSticky ? 'sticky top-0 left-0 right-0 border-b bg-white duration-300':''}`}>
+    <header className={`${isSticky ? 'sticky top-0 left-0 right-0 bg-white  shadow' : ''}`}>
+      <nav className={`lg:px-20 px-4 py-4 ${isSticky ? 'sticky top-0 left-0 right-0' : ''}` }>
+        <div className={`flex justify-between items-center`}>
           <a href="/" className='flex items-center space-x-1'>
             <img src={logo} alt="logo" className='w-10 h-10 inline-block items-center' />
             <span className='font-semibold'>USSD Finder</span>
