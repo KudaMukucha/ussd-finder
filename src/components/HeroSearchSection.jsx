@@ -51,7 +51,7 @@ export default function HeroSearchSection() {
   </div>
 </div>
         <h3 className='text-slate-700'>Find USSD codes available across various mobile network operators, banks, telcos, industries, and utilities.</h3>
-        <div className='pb-7 flex flex-wrap justify-center'>
+        <div className='pb-7 flex flex-wrap justify-center gap-1'>
            {
             searchButtonTags.map((tag,i)=>{
                 return(
