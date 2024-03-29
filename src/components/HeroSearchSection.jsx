@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { useEffect } from 'react'
 import {HiMagnifyingGlass }from 'react-icons/hi2'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 export default function HeroSearchSection() {
     const location = useLocation()
+    const navigate = useNavigate()
     const searchButtonTags = [
         {
             id:1,
@@ -26,15 +28,23 @@ export default function HeroSearchSection() {
         },
 
     ]
+    const [input,setInput] =useState('')
+    const submitHandler=(e)=>{
+        e.preventDefault()
+        navigate('/results/'+input)
+        // console.log('hey kuda,im so low')
+    }
 
-    useEffect(() => {
-      console.log(location);
-    }, [])
+    // useEffect(() => {
+    //   console.log(location);
+    // }, [])
   return (
     <div className='flex flex-col items-center text-center space-y-4 bg-slate-100  '>
         <h2 className='mt-5 font-extrabold text-5xl'>USSD Finder for Zimbabwe</h2>
         <div className="relative flex items-center px-3 py-1 w-[350px] rounded-md">
-  <input type="text" className="outline-none rounded-sm py-1.5 px-3 p-1 w-full" placeholder='Search bank, telcom, mobile money... ' />
+    <form className='w-full' onSubmit={submitHandler}>
+    <input type="text" className="outline-none rounded-sm py-1.5 px-3 p-1 w-full" placeholder='Search bank, telcom, mobile money... ' value={input} onChange={(e)=>setInput(e.target.value)} />
+    </form>
   <div className="absolute right-3 mr-2">
     <HiMagnifyingGlass />
   </div>
