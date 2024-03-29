@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import {HiMagnifyingGlass }from 'react-icons/hi2'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+
 export default function HeroSearchSection() {
     const location = useLocation()
     const navigate = useNavigate()
@@ -18,7 +19,7 @@ export default function HeroSearchSection() {
         },
         {
             id:3,
-            name:'Telco',
+            name:'Telecom',
              path:'/codes/telecom'
         },
         {
@@ -39,17 +40,17 @@ export default function HeroSearchSection() {
     //   console.log(location);
     // }, [])
   return (
-    <div className='flex flex-col items-center text-center space-y-4 bg-slate-100  '>
-        <h2 className='mt-5 font-extrabold text-5xl'>USSD Finder for Zimbabwe</h2>
+    <div className='flex flex-col items-center text-center space-y-4 bg-blue-100  '>
+        <h2 className='mt-5 font-extrabold text-5xl text-blue-950'>USSD Finder for Zimbabwe</h2>
         <div className="relative flex items-center px-3 py-1 w-[350px] rounded-md">
     <form className='w-full' onSubmit={submitHandler}>
-    <input type="text" className="outline-none rounded-sm py-1.5 px-3 p-1 w-full" placeholder='Search bank, telcom, mobile money... ' value={input} onChange={(e)=>setInput(e.target.value)} />
+    <input type="text" className="outline-none rounded-lg py-2 px-3 p-1 w-full" placeholder='Search bank, telcom, mobile money... ' value={input} onChange={(e)=>setInput(e.target.value)} />
     </form>
   <div className="absolute right-3 mr-2">
     <HiMagnifyingGlass />
   </div>
 </div>
-        <h3>Find USSD codes available across various mobile network operators, banks, telcos, industries, and utilities.</h3>
+        <h3 className='text-slate-700'>Find USSD codes available across various mobile network operators, banks, telcos, industries, and utilities.</h3>
         <div className='pb-7'>
            {
             searchButtonTags.map((tag,i)=>{

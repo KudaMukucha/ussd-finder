@@ -149,7 +149,7 @@
       "name": "Time/Number Inquiry - Netone",
       "code": "*120*8# ",
       "category": "telecom",
-      "description": "Check current time & check user’s mobile number.",
+      "description": "Check current time & user’s mobile number.",
       "icon": "roaming_activation_icon.png"
     },
     {

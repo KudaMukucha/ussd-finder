@@ -4,7 +4,7 @@ import {FaMinus, FaPlus} from 'react-icons/fa6'
 export default function Accordion({question,answer}) {
     const [accordionOpen,setAccordionOpen] =useState(false)
   return (
-    <div className="py-8 mt-3 bg-gray-200 p-4 rounded-lg">
+    <div className="py-8 mt-3 bg-white p-4 rounded-lg shadow">
         <button onClick={()=>setAccordionOpen(!accordionOpen)} className="flex justify-between items-center w-full text-blue-950 font-semibold">
             <span className="flex items-center">{question}</span>
             {accordionOpen ? (<FaMinus/>): (<FaPlus/>)}

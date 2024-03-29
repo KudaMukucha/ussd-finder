@@ -2,7 +2,7 @@ import Accordion from "../components/Accordion";
 
 export default function Faqs() {
   return (
-    <div className="px-4 lg:px-20 pt-4  bg-gray-100 min-h-screen pb-16">
+    <div className="px-4 lg:px-20 pt-4  bg-gradient-to-b from-blue-100 via-blue-300 min-h-screen pb-16">
         <div className="items-center text-center mt-20 pb-9">
         <h2 className='mt-5 font-extrabold text-4xl text-blue-950'>Frequently Asked Questions</h2>
         </div>
