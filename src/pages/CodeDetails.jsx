@@ -32,7 +32,7 @@ export default function CodeDetails() {
 
          <div>
           <p className="font-bold text-slate-800">Disclaimer:</p>
-         <p className="text-gray-700">The provided tool is intended solely for informational purposes. Although we strive to provide accurate data, users should acknowledge that this website assumes no liability for its accuracy.</p>
+         <p className="text-gray-700">The provided tool is intended solely for informational purposes. We ensure the USSD service codes featured in USSD Finder are carefully selected from reliable sources, allowing us to provide accurate and up-to-date information to the best of our expertise and understanding. Although we strive to provide accurate data, users should acknowledge that this website assumes no liability for its accuracy.</p>
          </div>
     </div>
   )
