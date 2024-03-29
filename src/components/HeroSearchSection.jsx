@@ -4,19 +4,23 @@ export default function HeroSearchSection() {
     const searchButtonTags = [
         {
             id:1,
-            name:'All'
+            name:'All',
+             path:'/'
         },
         {
             id:2,
-            name:'Banking'
+            name:'Banking',
+            path:'/codes/banking'
         },
         {
             id:3,
-            name:'Telco'
+            name:'Telco',
+             path:'/codes/telecom'
         },
         {
             id:4,
-            name:'Mobile Money'
+            name:'Mobile Money',
+             path:'/codes/mobile-money'
         },
 
     ]
@@ -34,7 +38,7 @@ export default function HeroSearchSection() {
            {
             searchButtonTags.map((tag,i)=>{
                 return(
-                    <Link key={i} className={'border border-slate-300 ml-2 px-4 py-2 rounded-md bg-white font- hover:text-blue-700 hover:border-blue-700 hover:font-semibold hover:scale-110 transition-all duration-300'}>
+                    <Link to={tag.path} key={i} className={'border border-slate-300 ml-2 px-4 py-2 rounded-md bg-white font- hover:text-blue-700 hover:border-blue-700 hover:font-semibold hover:scale-110 transition-all duration-300'}>
                             {tag.name}
                     </Link>
                 )
