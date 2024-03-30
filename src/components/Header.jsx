@@ -12,10 +12,10 @@ export default function Header() {
       name:'FAQs',
       path:'/faqs'
     },
-    {
-      name:'Blog',
-      path:'#'
-    },
+    // {
+    //   name:'Blog',
+    //   path:'#'
+    // },
 
   ]
 
