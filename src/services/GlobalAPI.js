@@ -1,0 +1,549 @@
+const codesData = {
+    "codes": [
+      {
+        "id": 1,
+        "name": "Econet Support",
+        "code": "*111#",
+        "category": "telecom",
+        "description": "General Econet Support.",
+        "icon": "balance_inquiry_icon.png"
+      },
+      {
+        "id": 2,
+        "name": "Econet Balance Enquiry",
+        "code": "*125#",
+        "category": "telecom",
+        "description": "Check your main airtime balance.",
+        "icon": "data_bundle_icon.png"
+      },
+      {
+        "id": 3,
+        "name": "Econet SMS Bundles",
+        "code": "*140#",
+        "category": "telecom",
+        "description": "SMS, Call Me Back, International Roaming",
+        "icon": "money_transfer_icon.png"
+      },
+      {
+        "id": 4,
+        "name": "Econet Data & Voice Bundles",
+        "code": "*143#",
+        "category": "telecom",
+        "description": "Data & voice bundles menu",
+        "icon": "call_me_back_icon.png"
+      },
+      {
+        "id": 5,
+        "name": "Ecocash",
+        "code": "*151#",
+        "category": "mobile-money",
+        "description": "Launches the primary Ecocash menu.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 6,
+        "name": "Econet Emergency Credit",
+        "code": "*179#",
+        "category": "telecom",
+        "description": "Airtime credit service.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 7,
+        "name": "Econet Call Me Back",
+        "code": "*555#",
+        "category": "telecom",
+        "description": "Call me back",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 8,
+        "name": "Vaya Digital Farmer",
+        "code": "*144#",
+        "category": "telecom",
+        "description": "Access farming tips",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 9,
+        "name": " Maisha Health Ecosystem",
+        "code": "*147#",
+        "category": "telecom",
+        "description": "Access health tips.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 10,
+        "name": "Econet/EcoCash Service Options",
+        "code": "*150#",
+        "category": "telecom",
+        "description": "Service options.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 11,
+        "name": "Ecocash FCA Wallet",
+        "code": "*153#",
+        "category": "mobile-money",
+        "description": "Launches the Ecocash FCA menu.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 12,
+        "name": "Facebook via USSD",
+        "code": "*325#",
+        "category": "telecom",
+        "description": "Access Facebook using Econet.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 13,
+        "name": "Call Status Service",
+        "code": "*595#",
+        "category": "telecom",
+        "description": "Econet call status service.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 14,
+        "name": "YoNumbers Competition",
+        "code": "*647#",
+        "category": "telecom",
+        "description": "Win Big with Econet YoNumbers.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 15,
+        "name": "Liquid Home Self-Service",
+        "code": "*656#",
+        "category": "telecom",
+        "description": "Econet Liquid self service",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 16,
+        "name": "Trivia - Econet",
+        "code": "*717#",
+        "category": "telecom",
+        "description": "News, jokes, quotes, sports news",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 17,
+        "name": "Ecosure",
+        "code": "*900#",
+        "category": "telecom",
+        "description": "Access Ecosure basic information.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 18,
+        "name": "OneMoney Menu",
+        "code": "*111# ",
+        "category": "mobile-money",
+        "description": "Launches the primary OneMoney menu.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 19,
+        "name": "Time/Number Inquiry - Netone",
+        "code": "*120*8# ",
+        "category": "telecom",
+        "description": "Check current time & user’s mobile number.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 20,
+        "name": " NetOne Self-Care",
+        "code": "*123# ",
+        "category": "telecom",
+        "description": "General Netone Support.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 21,
+        "name": "Out of Bundle Browsing - Netone",
+        "code": "*130#",
+        "category": "telecom",
+        "description": "Turn out of bundle browsing on or off",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 22,
+        "name": "Netone Balance Enquiry",
+        "code": "*134#",
+        "category": "telecom",
+        "description": "Check your main airtime balance.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 23,
+        "name": "Netone Bundles ",
+        "code": "*171# ",
+        "category": "telecom",
+        "description": " Airtime Recharge, Bundles, One Fusion.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 24,
+        "name": "Netone Balance Enquiry",
+        "code": "*134#",
+        "category": "telecom",
+        "description": "Access business bundles",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 25,
+        "name": "Airtime & Bundles - Netone",
+        "code": "*379#",
+        "category": "telecom",
+        "description": "USD airtime and bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 26,
+        "name": "Telecel Balance Enquiry",
+        "code": "*122#",
+        "category": "telecom",
+        "description": "Check your main airtime balance.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 27,
+        "name": "Telecel Call Me Back",
+        "code": "*140#",
+        "category": "telecom",
+        "description": "Call me back",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 28,
+        "name": "Reachability Notification - Telecel",
+        "code": "*141#",
+        "category": "telecom",
+        "description": "Notify me when reachable.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 29,
+        "name": " Missed Call Alert - Telecel",
+        "code": "*142#",
+        "category": "telecom",
+        "description": " Missed call alert.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 30,
+        "name": "Emergency Credit - Telecel",
+        "code": "*143#",
+        "category": "telecom",
+        "description": "Airtime credit service.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 31,
+        "name": "Data Bundles - Telecel",
+        "code": "*144#",
+        "category": "telecom",
+        "description": "Broadband plus data bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 32,
+        "name": "Voice Bundles - Telecel",
+        "code": "*146#",
+        "category": "telecom",
+        "description": "Cross-net voice bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 33,
+        "name": "Teletunes",
+        "code": "*147#",
+        "category": "telecom",
+        "description": "Access teletunes.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 34,
+        "name": "Trivia - Telecel",
+        "code": "*151#",
+        "category": "telecom",
+        "description": "News, music, religious pack.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 35,
+        "name": "International Voice bundles - Telecel",
+        "code": "*155#",
+        "category": "telecom",
+        "description": "International voice bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 36,
+        "name": "Khuluma Balance Enquiry - Telecel",
+        "code": "*177#",
+        "category": "telecom",
+        "description": "Khuluma balance enquiry.",
+        "icon": "roaming_activation_icon.png"
+      }, {
+        "id": 37,
+        "name": "SMS Bundles - Telecel",
+        "code": "*404#",
+        "category": "telecom",
+        "description": "Access SMS Bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 38,
+        "name": "Daily Data Bundles - Telecel",
+        "code": "*470#",
+        "category": "telecom",
+        "description": " Daily Data Bundles, all night long bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 39,
+        "name": "Social Data Bundles - Telecel",
+        "code": "*480#",
+        "category": "telecom",
+        "description": "Whatsapp, Facebook, Wi-Fi Bundles.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 40,
+        "name": "Telecare",
+        "code": "*808#",
+        "category": "telecom",
+        "description": "General Telecel Support.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 41,
+        "name": "Telecash",
+        "code": "*888#",
+        "category": "mobile-money",
+        "description": "Launches the primary Telecash menu.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 42,
+        "name": "Prepaid International Roaming",
+        "code": "*33156#",
+        "category": "telecom",
+        "description": "Access Telecel international roaming.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 43,
+        "name": "Access Forex",
+        "code": "*134*3042#",
+        "category": "banking",
+        "description": "Send money to Zim from SA.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 44,
+        "name": "Standard Chartered Bank",
+        "code": "*200#",
+        "category": "banking",
+        "description": "Access Standard Chartered Bank Services.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 45,
+        "name": "NBS",
+        "code": "*202#",
+        "category": "banking",
+        "description": "National Building Society Limited",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 46,
+        "name": "Steward Bank",
+        "code": "*210#",
+        "category": "banking",
+        "description": "Access Steward Bank Services.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 47,
+        "name": "MyCash",
+        "code": "*212#",
+        "category": "banking",
+        "description": "MyCash - Innscor Africa Limited Group.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 48,
+        "name": "FBC Bank",
+        "code": "*220#",
+        "category": "banking",
+        "description": "First Banking Corporation Limited.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 49,
+        "name": "POSB (Telecel & NetOne)",
+        "code": "*222#",
+        "category": "banking",
+        "description": "People's Own Savings Bank.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 50,
+        "name": "POSB (Econet)",
+        "code": "*223#",
+        "category": "banking",
+        "description": "People's Own Savings Bank.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 51,
+        "name": "ZB Bank (NetOne & Telecel)",
+        "code": "*225#",
+        "category": "banking",
+        "description": "ZB Financial Holdings.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 52,
+        "name": "ZB Bank (Econet)",
+        "code": "*400*600#",
+        "category": "banking",
+        "description": "ZB Financial Holdings.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 53,
+        "name": "CABS",
+        "code": "*227#",
+        "category": "banking",
+        "description": "Central African Building Society.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 54,
+        "name": "First Capital Bank",
+        "code": "*229#",
+        "category": "banking",
+        "description": "First Capital Bank.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 55,
+        "name": "CBZ",
+        "code": "*230#",
+        "category": "banking",
+        "description": "Commercial Bank of Zimbabwe,",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 56,
+        "name": "NMB",
+        "code": "*241#",
+        "category": "banking",
+        "description": "National Merchant Bank of Zimbabwe Limited.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 57,
+        "name": "BancABC",
+        "code": "*242#",
+        "category": "banking",
+        "description": "African Banking Corporation of Zimbabwe.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 58,
+        "name": "Ecobank",
+        "code": "*245#",
+        "category": "banking",
+        "description": "Ecobank Zimbabwe.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 59,
+        "name": "Stanbic",
+        "code": "*247#",
+        "category": "banking",
+        "description": "Stanbic Holdings.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 60,
+        "name": "Agribank",
+        "code": "*277#",
+        "category": "banking",
+        "description": "Agricultural Bank of Zimbabwe Ltd.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 61,
+        "name": "Nedbank",
+        "code": "*299#",
+        "category": "banking",
+        "description": "Nedbank Group.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 62,
+        "name": "Metbank",
+        "code": "*234#",
+        "category": "banking",
+        "description": "Metbank Limited.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 63,
+        "name": "InnBucks",
+        "code": "*569#",
+        "category": "mobile-money",
+        "description": "InnBucks MicroBank Pvt Ltd.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 64,
+        "name": "City Parking",
+        "code": "*192#",
+        "category": "utility",
+        "description": "Pay parking fees.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 65,
+        "name": "Techzim",
+        "code": "*405#",
+        "category": "utility",
+        "description": "Airtime, Zesa, Data, Nyaradzo.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 66,
+        "name": "C-Trade",
+        "code": "*727#",
+        "category": "utility",
+        "description": "Buying shares on ZSE.",
+        "icon": "roaming_activation_icon.png"
+      },
+      {
+        "id": 67,
+        "name": "Click & Pay",
+        "code": "*788#",
+        "category": "utility",
+        "description": "Airtime, tickets, Zesa, Bundles",
+        "icon": "roaming_activation_icon.png"
+      }
+    ]
+  }
+
+
+  const getAllCodes = async()=>{
+    return {codes: codesData}
+  }
+
+
+  export default{
+    getAllCodes
+  }

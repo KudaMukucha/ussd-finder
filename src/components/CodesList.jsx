@@ -1,18 +1,30 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import GlobalAPI from "../services/GlobalAPI";
 import CodeCard from "./CodeCard";
 
 export default function CodesList() {
 const [codes,setCodes] = useState([])
 const [loading, setLoading] = useState(true);
-  const getCodes = async()=>{
-    const response = await fetch(`http://localhost:3000/codes`)
-    const data = await response.json()
-    setCodes(data)
-    setLoading(false);
-    // console.log(data)
-  }
+  // const getCodes = async()=>{
+  //   const response = await fetch(`http://localhost:3000/codes`)
+  //   const data = await response.json()
+  //   setCodes(data)
+  //   setLoading(false);
+  //   // console.log(data)
+  // }
 
+  // useEffect(() => {
+  //   getCodes()
+  // }, [])
+
+  const getCodes = async() =>{
+    const response = await GlobalAPI.getAllCodes()
+    const data = response.codes.codes
+    setCodes(data)
+    setLoading(false)
+    // console.log(data);
+  }
   useEffect(() => {
     getCodes()
   }, [])
