@@ -2,23 +2,36 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import CodeCard from "../components/CodeCard"
 import HeroSearchSection from "../components/HeroSearchSection"
+import GlobalAPI from "../services/GlobalAPI"
 
 export default function Searched() {
     const [codes,setCodes] = useState([])
     const [loading, setLoading] = useState(true);
   let params =useParams()
-  const getCodes = async(name)=>{
-    const response = await fetch(`http://localhost:3000/codes/`)
-    const codesData = await response.json()
-    const object = codesData.filter((obj) => obj.name.toLowerCase().includes(name.toLowerCase()));;
-    setCodes(object)
-    setLoading(false);
-    // console.log(object)
-  }
+  // const getCodes = async(name)=>{
+  //   const response = await fetch(`http://localhost:3000/codes/`)
+  //   const codesData = await response.json()
+  //   const object = codesData.filter((obj) => obj.name.toLowerCase().includes(name.toLowerCase()));;
+  //   setCodes(object)
+  //   setLoading(false);
+  //   // console.log(object)
+  // }
 
-  useEffect(() => {
+  // useEffect(() => {
+  //     getCodes(params.search)
+  // }, [params.search])
+
+    const getCodes = async(name)=>{
+      const response = await GlobalAPI.getAllCodes()
+      const codesData = response.codes.codes
+      const object = codesData.filter((obj) => obj.name.toLowerCase().includes(name.toLowerCase()));
+      setCodes(object)
+      setLoading(false)
+    }
+    
+    useEffect(() => {
       getCodes(params.search)
-  }, [params.search])
+    }, [params.search])
   return (
     <>
     <HeroSearchSection/>
