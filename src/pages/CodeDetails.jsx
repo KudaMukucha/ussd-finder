@@ -31,7 +31,8 @@ export default function CodeDetails() {
      fetchDetails()
     }, [params.name])
   return (
-    <div className="bg-blue-100 px-4 lg:px-20 pt-10 space-y-10 min-h-screen sm:pb-3">
+    <>
+    <div className="bg-blue-100 px-4 lg:px-20 pt-10 space-y-10 min-h-screen">
        <Link to={'/'} className={'text-blue-700 font-medium text-[17px] flex items-center space-x-1'}>
             <FaChevronLeft className="text-slate-800"/>
             <span className="">Back to home</span>
@@ -48,5 +49,7 @@ export default function CodeDetails() {
          <p className="text-gray-700">The provided tool is intended solely for informational purposes. We ensure the USSD service codes featured in USSD Finder are carefully selected from reliable sources, allowing us to provide accurate and up-to-date information to the best of our expertise and understanding. Although we strive to provide accurate data, users should acknowledge that this website assumes no liability for its accuracy.</p>
          </div>
     </div>
+      <div className="mb-3"></div>
+    </>
   )
 }
