@@ -31,7 +31,7 @@ export default function CodeDetails() {
      fetchDetails()
     }, [params.name])
   return (
-    <div className="bg-blue-100 px-4 lg:px-20 pt-10 space-y-10 h-screen">
+    <div className="bg-blue-100 px-4 lg:px-20 pt-10 space-y-10 min-h-screen">
        <Link to={'/'} className={'text-blue-700 font-medium text-[17px] flex items-center space-x-1'}>
             <FaChevronLeft className="text-slate-800"/>
             <span className="">Back to home</span>
