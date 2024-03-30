@@ -4,21 +4,35 @@ import { useParams } from "react-router-dom";
 import CodeCard from '../components/CodeCard'
 import HeroSearchSection from "../components/HeroSearchSection";
 import {motion} from 'framer-motion'
+import GlobalAPI from "../services/GlobalAPI";
 export default function Codes() {
   const [codes,setCodes] = useState([])
   const [loading, setLoading] = useState(true);
   let params =useParams()
+  // const getCodes = async(category)=>{
+  //   const response = await fetch(`http://localhost:3000/codes/`)
+  //   const codesData = await response.json()
+  //   const object = codesData.filter(obj => obj.category === `${category}`);
+  //   setCodes(object)
+  //   setLoading(false);
+  //   // console.log(object)
+  // }
+
+  // useEffect(() => {
+  //     getCodes(params.type)
+  // }, [params.type])
+
   const getCodes = async(category)=>{
-    const response = await fetch(`http://localhost:3000/codes/`)
-    const codesData = await response.json()
-    const object = codesData.filter(obj => obj.category === `${category}`);
+    const response = await GlobalAPI.getAllCodes()
+    const codesData = response.codes.codes 
+    const object = codesData.filter(obj => obj.category === `${category}` )
     setCodes(object)
-    setLoading(false);
+    setLoading(false)
     // console.log(object)
   }
 
   useEffect(() => {
-      getCodes(params.type)
+    getCodes(params.type)
   }, [params.type])
   return (
     <>
