@@ -1,21 +1,34 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { FaChevronLeft } from "react-icons/fa6"
+import GlobalAPI from "../services/GlobalAPI"
 
 export default function CodeDetails() {
     const [details,setDetails] = useState({})
     const params = useParams()
-    const fetchDetails = async()=>{
-        const response = await fetch(`http://localhost:3000/codes/`)
-        const detailsData = await response.json()
-        const object = detailsData.find(obj => obj.name === params.name);
-        setDetails(object)
-        // console.log(object);
+    // const fetchDetails = async()=>{
+    //     const response = await fetch(`http://localhost:3000/codes/`)
+    //     const detailsData = await response.json()
+    //     const object = detailsData.find(obj => obj.name === params.name);
+    //     setDetails(object)
+    //     // console.log(object);
        
+    // }
+
+    // useEffect(() => {
+    //     fetchDetails()
+    // }, [params.name])
+
+    const fetchDetails=async()=>{
+      const response = await GlobalAPI.getAllCodes()
+      const detailsData = response.codes.codes
+      const object = detailsData.find(obj => obj.name === params.name);
+      setDetails(object)
+      // console.log(object);
     }
 
     useEffect(() => {
-        fetchDetails()
+     fetchDetails()
     }, [params.name])
   return (
     <div className="bg-blue-100 px-4 lg:px-20 pt-10 space-y-10 h-screen">
